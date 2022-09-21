@@ -51,7 +51,7 @@ export const baseNetwork = {
 
     },
     delete: async (url,id)=>{
-        await axiosInstance.delete(url,id)
+        await axiosInstance.delete(url.concat("/").concat(id) )
         .then(res => {
             if (res.status == 200) {
             }
